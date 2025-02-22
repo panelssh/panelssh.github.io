@@ -1,0 +1,14 @@
+{
+  "name": "panel-ssh",
+  "version": "1.0.0",
+  "description": "Panel SSH - Powerful SSH / VPN Management Panel",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./docs/css/styles.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./docs/css/styles.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35"
+  }
+}

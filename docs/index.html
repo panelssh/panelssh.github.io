@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Panel SSH - Powerful SSH / VPN Management Panel</title>
+    <meta name="title" content="Panel SSH - Powerful SSH / VPN Management Panel">
+    <meta name="description" content="Professional tunneling services including SSH, OpenVPN, WireGuard, Shadowsocks, V2Ray/VMess, and more. Secure, fast, and reliable network solutions for individuals and businesses.">
+    <meta name="keywords" content="SSH tunnel, VPN service, OpenVPN, WireGuard, Shadowsocks, V2Ray, VMess, proxy server, network security, tunneling service">
+    <meta name="author" content="Panel SSH">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://panelssh.com" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://panelssh.com">
+    <meta property="og:title" content="Powerful SSH / VPN Management Panel">
+    <meta property="og:description" content="Professional tunneling services including SSH, OpenVPN, WireGuard, Shadowsocks, V2Ray/VMess, and more. Secure, fast, and reliable network solutions for individuals and businesses.">
+    <meta property="og:image" content="https://panelssh.com/assets/og-image-min.png">
+    <meta property="og:site_name" content="Panel SSH">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://panelssh.com">
+    <meta property="twitter:title" content="Powerful SSH / VPN Management Panel">
+    <meta property="twitter:description" content="Professional tunneling services including SSH, OpenVPN, WireGuard, Shadowsocks, V2Ray/VMess, and more. Secure, fast, and reliable network solutions for individuals and businesses.">
+    <meta property="twitter:image" content="https://panelssh.com/assets/og-image-min.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Google Fonts with preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Panel SSH",
+      "url": "https://panelssh.com",
+      "description": "Professional tunneling services including SSH, OpenVPN, WireGuard, Shadowsocks, V2Ray/VMess, and more.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://panelssh.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Panel SSH",
+      "url": "https://panelssh.com",
+      "logo": "https://panelssh.com/assets/logo.png",
+      "sameAs": [
+        "https://github.com/panelssh"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62-851-5885-1596",
+        "contactType": "customer service",
+        "email": "panelssh@hotmail.com"
+      }
+    }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-200">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="text-2xl font-bold text-gray-800 dark:text-white font-display">
+                Panel SSH
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
+                <svg id="sun" class="w-6 h-6 hidden dark:block text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
+                </svg>
+                <svg id="moon" class="w-6 h-6 block dark:hidden text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6 font-display">
+                Powerful SSH / VPN Management Panel
+            </h1>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                <strong>Panel SSH</strong> is a cutting-edge platform designed to provide secure, high-performance
+                tunneling, VPN, and proxy solutions. Whether you need encrypted access, private browsing, or a reliable
+                network infrastructure, we offer a complete suite of services tailored for individuals, businesses, and
+                developers.
+            </p>
+            <a href="https://wa.me/6285158851596"
+                class="flex flex-row items-center justify-center mx-auto gap-2 bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors w-fit"
+                target="_blank" rel="noopener noreferrer">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                </svg>
+                <span>Contact Us</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12 font-display">
+            Our Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Cards -->
+            <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 font-display">
+                    SSH Tunneling
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Secure shell tunneling for encrypted data transfer
+                </p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 font-display">
+                    OpenVPN
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Virtual private network for secure remote access
+                </p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 font-display">
+                    WireGuard
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Modern, fast and secure VPN tunnel
+                </p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 font-display">
+                    Shadowsocks
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Fast, encrypted proxy for secure internet access
+                </p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 font-display">
+                    V2Ray/VMess
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Advanced proxy protocol for enhanced security
+                </p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 font-display">
+                    Proxy Solutions
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Custom proxy server solutions for your needs
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="container mx-auto px-6 py-16 bg-gray-50 dark:bg-gray-800 rounded-xl">
+        <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12 font-display">
+            Why Choose Panel SSH?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- All-in-One Solution -->
+            <div class="flex items-start space-x-4 p-6 bg-white dark:bg-gray-700 rounded-lg">
+                <div class="text-primary">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 font-display">
+                        All-in-One Network Security
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        One platform, multiple protocols, maximum protection. Simplify your security infrastructure with
+                        our comprehensive solution.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Privacy & Encryption -->
+            <div class="flex items-start space-x-4 p-6 bg-white dark:bg-gray-700 rounded-lg">
+                <div class="text-primary">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 font-display">
+                        Privacy & Encryption
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We ensure your internet traffic stays private and secure with military-grade encryption
+                        protocols.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Performance -->
+            <div class="flex items-start space-x-4 p-6 bg-white dark:bg-gray-700 rounded-lg">
+                <div class="text-primary">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 font-display">
+                        Fast & Reliable Performance
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Optimized servers and infrastructure ensure seamless connectivity and maximum speed.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Flexibility -->
+            <div class="flex items-start space-x-4 p-6 bg-white dark:bg-gray-700 rounded-lg">
+                <div class="text-primary">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 font-display">
+                        Flexible & Scalable
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Solutions that grow with you - perfect for personal use, businesses, and enterprises alike.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Management -->
+            <div class="flex items-start space-x-4 p-6 bg-white dark:bg-gray-700 rounded-lg">
+                <div class="text-primary">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 font-display">
+                        Easy Management & Automation
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Intuitive control panel and API integration for seamless management and automation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="flex items-start space-x-4 p-6 bg-white dark:bg-gray-700 rounded-lg">
+                <div class="text-primary">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 font-display">
+                        24/7 Support & Expertise
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Get expert help anytime from our experienced technical support team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12 font-display">
+            Technology Stack
+        </h2>
+
+        <!-- Backend Stack -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6 font-display text-center">
+                Backend Technologies
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-8 h-8"
+                        alt="PHP" />
+                    <div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white">PHP</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Laravel Framework
+                        </p>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"
+                        class="w-8 h-8" alt="Golang" />
+                    <div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white">
+                            Golang
+                        </h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            High-Performance
+                        </p>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        class="w-8 h-8" alt="JavaScript" />
+                    <div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white">
+                            JavaScript
+                        </h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Express.js, Nest.js
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frontend Stack -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6 font-display text-center">
+                Frontend Frameworks
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        class="w-8 h-8" alt="React" />
+                    <span class="font-semibold text-gray-800 dark:text-white">React.js</span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                        class="w-8 h-8 dark:invert" alt="Next.js" />
+                    <span class="font-semibold text-gray-800 dark:text-white">Next.js</span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                        class="w-8 h-8" alt="Vue.js" />
+                    <span class="font-semibold text-gray-800 dark:text-white">Vue.js</span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg"
+                        class="w-8 h-8" alt="Nuxt.js" />
+                    <span class="font-semibold text-gray-800 dark:text-white">Nuxt.js</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Database Stack -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6 font-display text-center">
+                Database Solutions
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                        class="w-8 h-8" alt="MySQL" />
+                    <span class="font-semibold text-gray-800 dark:text-white">MySQL</span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        class="w-8 h-8" alt="PostgreSQL" />
+                    <span class="font-semibold text-gray-800 dark:text-white">PostgreSQL</span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                        class="w-8 h-8" alt="MongoDB" />
+                    <span class="font-semibold text-gray-800 dark:text-white">MongoDB</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deployment Stack -->
+        <div>
+            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6 font-display text-center">
+                Deployment Platforms
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                        class="w-8 h-8" alt="GCP" />
+                    <span class="font-semibold text-gray-800 dark:text-white">GCP</span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                        class="w-8 h-8" alt="AWS" />
+                    <span class="font-semibold text-gray-800 dark:text-white">AWS</span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"
+                        class="w-8 h-8" alt="Vercel" />
+                    <span class="font-semibold text-gray-800 dark:text-white">Vercel</span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg"
+                        class="w-8 h-8" alt="Netlify" />
+                    <span class="font-semibold text-gray-800 dark:text-white">Netlify</span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center space-x-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg"
+                        class="w-8 h-8" alt="Heroku" />
+                    <span class="font-semibold text-gray-800 dark:text-white">Heroku</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-8">
+        <div class="flex flex-col items-center space-y-4">
+            <!-- Social Links -->
+            <div class="flex space-x-6">
+                <!-- GitHub -->
+                <a href="https://github.com/panelssh"
+                    class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <!-- Email -->
+                <a href="mailto:panelssh@hotmail.com"
+                    class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                        <path
+                            d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="text-center text-gray-600 dark:text-gray-400">
+                © 2024 Panel SSH. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById("theme-toggle");
+
+        themeToggle.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark");
+
+            // Save theme preference
+            const isDark = document.documentElement.classList.contains("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
+</body>
+
+</html>
